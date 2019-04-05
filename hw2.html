@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#heading{color: red }
+		#firstname{border: 1px solid green}
+		#Lastname{border: 1px solid red}
+		#StreetAddress{border: 1px solid green}
+		#City{border: 1px solid black}
+		#State{border: 1px solid maroon}
+		#Zip{border: 1px solid blue}
+		#Phone{border: 1px solid yellow}
+		#Email{border: 1px solid red}
+		body{ background-color: #99ff99;
+			border:5px solid blue}
+		.resize {
+    width: 400px;
+    height: auto;
+}
+#image{
+text-align: right;
+background-attachment: fixed;
+}
+	</style>
+ 
+	<title> Student Survey Form </title></script>
+</head>
+<body>
+<div id="heading">
+<h1>Student Survey Form</h1>
+</div>
+
+<table>
+<tr>
+<div id="firstname">
+	<h3>  First Name </h3>
+	<td><td><form method = "post" autocomplete = "on" ></td>
+		<p> <label> First name: <input style="width: 80%" id = "name" type = "First name" autofocus required /> <em> * </em>
+		</label></p></div></tr>
+<tr>
+<div id="Lastname">
+	<h3>  Last Name </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Last name: <input style="width: 80%" type = "Last name" required="" /> <em> * </em>
+		</label></p></div></tr>
+<tr>
+<div id="StreetAddress">
+	<h3>  Street Address </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Street Address: <input style="width: 80%" type = "Street Address" required="" /> <em> * </em>
+		</label></p></tr>	
+
+<tr>
+<div id="City">
+	<h3>  City </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<span id = "city" class="validator" ></span>
+		<p> <label> City: <input id="city" style="width: 80%" type = "City" required /> <em> * </em>
+		</label></p></tr>
+<tr>
+<div id="State">
+	<h3>  State </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<span id = "state" class="validator" ></span>
+		<p> <label> State: <input id="state" style="width: 80%" type = "State" required /> <em> * </em>
+		</label></p></tr>
+
+<tr>
+<div id="Zip">
+	<h3>  Zip </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Zip: <input id="zip" onblur='showCityState()' style="width: 80%" type = "Zip" required/> <em> * </em>
+			<span id="validateZip" class="validator"></span>
+		</label></p></tr>	
+
+<tr>
+<div id="Phone">
+	<h3>  Phone </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Phone: <input style="width: 80%" type = "Phone" placeholder="999-999-9999" required /> <em> * </em>
+		</label></p></tr>
+<tr>
+<div id="Email">
+	<h3>  Email</h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Email: <input type = "Email" placeholder="example@gmu.edu" required /> <em> * </em>
+		</label></p></tr>
+<tr>
+<div id="URL">
+	<h3>  URL </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> URL: <input style="width: 80%" type = "URL" placeholder="http://mason.gmu.edu/~username" required /> <em> * </em>
+		</label></p></tr>
+<tr>
+<div id="Date of Survey">
+	<h3>  Date of Survey </h3>
+	<td><form method = "post" autocomplete = "on"></td>
+		<p> <label> Date of Survey: <input style="width: 80%" type = "Date of Survey" placeholder="mm/dd/yyyy" required /> <em> * </em>
+		</label></p></tr>
+
+<h2> <strong> THINGS MOST LIKED ON CAMPUS </strong></h2>
+	<label>Students
+	<input name = "thingsliked" type = "checkbox"
+	value = "Students" /></label>
+
+	<label>Location
+	<input name = "thingsliked" type = "checkbox"
+	value = "Location"  /></label> 
+
+	<label>Campus
+	<input name = "thingsliked" type = "checkbox"
+	value = "Campus" /></label>
+
+	<label>Atmosphere
+	<input name = "thingsliked" type = "checkbox"
+	value = "Atmosphere" /></label>
+
+	<label>Dorms
+	<input name = "thingsliked" type = "checkbox"
+	value = "Dorms" /></label>
+
+	<label>Sports
+	<input name = "thingsliked" type = "checkbox"
+	value = "Sports" /></label>
+
+<h2> <strong> Prospective students on how they became interested in this university</strong></h2>
+	
+	<label>Friends
+	<input name = "YthisUni" type = "radio"
+	value = "Friends" /></label>
+
+	<label>TV
+	<input name = "YthisUni" type = "radio"
+	value = "TV" /></label>
+
+	<label>Internet
+	<input name = "YthisUni" type = "radio"
+	value = "Internet" /></label>
+
+	<label>Other
+	<input name = "YthisUni" type = "radio"
+	value = "Other" /></label>
+
+	<h2> Comments: </h2>
+
+	<textarea name="Comments" rows="10" cols="30">
+
+	</textarea>
+
+<h2> Choose High school Graduation year </h2>
+		<input list="Months" name="browser"  placeholder="Select Month">
+ 		<datalist id="Months">
+   		<option value="January"> 
+   		<option value="Febraury"> 
+   		<option value="March">
+   		<option value="April">
+   		<option value="May">
+   		<option value="June">
+    	<option value="July">
+     	<option value="August">
+      	<option value="September">
+       	<option value="October">
+   		<option value="November">
+    	<option value="December">
+
+ </datalist></option>
+ <br>
+<input type="number" maxlength="4" style="width: 80%" min="2016" max="2019" autocomplete="on" placeholder="Year Ex: 2019">
+</br>
+<h2>Data: </h2>
+<p>
+<input id="datainput" name="datainput" style="width: 80%" type="text"  placeholder="enter 10 number like the example(1,2,3,4,5,6,7,8,9,10)"  onchange="avgfunc()">
+</p>
+
+<h2>Maximum:</h2>
+<p><output id="max"></output></p>>
+
+<h2>Average:</h2>
+<p><output id="avg"></output></p>
+
+</table>
+<p>
+	<input type = "submit" value = "Submit" onclick="validation()" /> 
+	<input type = "reset" value = "Clear" onclick="clearForm()"/>
+</p>
+</form>
+
+<a href="hw3.html"> Computer Science Info </a>
+
+<div id="image">
+
+<a href="https://www2.gmu.edu"><img class="resize" src="gmu.png" alt="gmu logo" >
+</div>
+
+<br> Website by : Pratheek Jayanth (G01099885) </br>
+
+</body>
+</html>

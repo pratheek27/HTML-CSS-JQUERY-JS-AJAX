@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#heading{color: red }
+		#firstname{border: 1px solid green}
+		#Lastname{border: 1px solid red}
+		#StreetAddress{border: 1px solid green}
+		#City{border: 1px solid black}
+		#State{border: 1px solid maroon}
+		#Zip{border: 1px solid blue}
+		#Phone{border: 1px solid yellow}
+		#Email{border: 1px solid red}
+		body{ background-color: #99ff99;
+			border:5px solid blue}
+		.resize {
+    width: 400px;
+    height: auto;
+}
+#image{
+text-align: right;
+background-attachment: fixed;
+}
+	</style>
+
+<script type = "text/javascript">
+var cookie_name;
+if(document.cookie)
+{
+
+  var cookie_name_exists = unescape(document.cookie);
+  var cookie_split = cookie_name_exists.split("=");
+  
+  
+  cookie_name = cookie_split[1];
+}
+else
+{
+  var current_time;
+  var cookie_expires_time;
+  
+  current_time = new Date();            
+  current_time.setTime(current_time.getTime() + (5*60*1000));    
+  cookie_expires_time = " expires=" + current_time.toUTCString();   
+  
+  cookie_name = window.prompt("Kindly Enter your name");  
+  
+  document.cookie = "cookie_name=" + escape(cookie_name) + ";" + cookie_expires_time; 
+} 
+  
+  
+var now=new Date();
+if(now.getHours()<12)
+  document.write("<h1>Good Morning, ");
+else if(now.getHours()>16)
+  document.write("<h1>Good Evening, ");
+else
+  document.write("<h1>Good Afternoon, ");
+document.writeln(cookie_name+". Welcome to Assignment 3</h1>");
+document.writeln("<a href = 'javascript:resetCookie()'>" + "Please click here if you are not "+cookie_name+".</a>");
+function resetCookie()
+{
+  document.cookie="cookie_name=null; expires=Thu, 18 Aug 2013 00:00:01 UTC";
+  location.reload(true);
+}
+{
+ function validate()
+        {
+            var firstname=document.f1.firstname.value;
+            var lastName=document.f1.Lastname.value;
+            var Streetaddress=document.f1.Streetaddress.value;
+            var City=document.f1.City.value;
+            var State=document.f1.State.value;
+            var Zip=document.f1.Zip.value;
+            var Phone=document.f1.Phone.value;
+            var Email=document.f1.Email.value;
+            var errormssg="";
+            if(firstName.length>20)
+            {
+                alert("Value can't exceed 20");
+            }
+            if(LastName.length>20)
+            {
+                alert("Value can't exceed 20");
+            }
+            if($('input[name="check"]:checked').length < 2)
+            {
+        errormssg="min 2 checkboxes must be selected\n";
+	}
+	
+	if($('input[name="radio"]:checked').length < 1)
+	{
+        errormssg="min 1 radio button must be selected \n";
+	}
+	
+	if(!(email.test(email)))
+	{
+        errormssg="Inavlid email id format\n";
+	}
+
+	if(emptyCheck(name))
+    {
+        alert("Name cannot be empty\n");
+    }
+    if(emptyCheck(addr))
+    {
+        alert("Address cannot be empty \n");
+    }
+
+    if(((/^[a-zA-Z- ]*$/.test(name))==false)&&(name!=""))
+    {
+        document.getElementById("name").innerHTML="";
+        alert('Name must contain only alphabets \n');
+    }
+
+    if((/^[a-zA-Z0-9-]*$/.test(addr))==false)
+    {
+        alert('Address Field must contain Alphanumeric characters only \n');
+    }
+}  
+        }
+   
+
+  function clearForm()
+  {
+    document.getElementById("average").innerHTML="";
+    document.getElementById("maximum").innerHTML="";
+    document.getElementById("ziperror").innerHTML="";
+    document.getElementById("city").innerHTML="";
+    document.getElementById("state").innerHTML="";
+  }
+</script>
+
+ 
+	<title> Student Survey Form </title></script>
+</head>
+<body>
+
+<div id="heading">
+<h1>Student Survey Form</h1>
+</div>
+
+<table>
+
+<div id="firstname">
+	<tr><th><h3>  First Name </h3></th>
+	<form method = "post" autocomplete = "on" >
+		<p> <label> First name: <input type = "First name" autofocus required /> <em> * </em>
+		</label></p></div>
+
+<div id="Lastname">
+	<h3><tr><th>  Last Name </th></tr></h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Last name: <input type = "Last name" required="" /> <em> * </em>
+		</label></p></div>
+
+<div id="StreetAddress">
+	<h3>  Street Address </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Street Address: <input type = "Street Address" required="" /> <em> * </em>
+		</label></p>
+
+<div id="City">
+	<h3>  City </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> City: <input type = "City" required /> <em> * </em>
+		</label></p>
+
+<div id="State">
+	<h3>  State </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> State: <input type = "State" required /> <em> * </em>
+		</label></p>
+
+<div id="Zip">
+	<h3>  Zip </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Zip: <input type = "Zip" required/> <em> * </em>
+		</label></p>
+
+<div id="Phone">
+	<h3>  Phone </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Phone: <input type = "Phone" placeholder="999-999-9999" required /> <em> * </em>
+		</label></p>
+
+<div id="Email">
+	<h3>  Email</h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Email: <input type = "Email" placeholder="example@gmu.edu" required /> <em> * </em>
+		</label></p>
+
+<div id="URL">
+	<h3>  URL </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> URL: <input type = "URL" placeholder="http://mason.gmu.edu/~username" required /> <em> * </em>
+		</label></p>
+
+<div id="Date of Survey">
+	<h3>  Date of Survey </h3>
+	<form method = "post" autocomplete = "on">
+		<p> <label> Date of Survey: <input type = "Date of Survey" placeholder="mm/dd/yyyy" required /> <em> * </em>
+		</label></p>
+
+<h2> <strong> THINGS MOST LIKED ON CAMPUS </strong></h2>
+	<label>Students
+	<input name = "thingsliked" type = "checkbox"
+	value = "Students" /></label>
+
+	<label>Location
+	<input name = "thingsliked" type = "checkbox"
+	value = "Location"  /></label> 
+
+	<label>Campus
+	<input name = "thingsliked" type = "checkbox"
+	value = "Campus" /></label>
+
+	<label>Atmosphere
+	<input name = "thingsliked" type = "checkbox"
+	value = "Atmosphere" /></label>
+
+	<label>Dorms
+	<input name = "thingsliked" type = "checkbox"
+	value = "Dorms" /></label>
+
+	<label>Sports
+	<input name = "thingsliked" type = "checkbox"
+	value = "Sports" /></label>
+
+<h2> <strong> Prospective students on how they became interested in this university</strong></h2>
+	
+	<label>Friends
+	<input name = "YthisUni" type = "radio"
+	value = "Friends" /></label>
+
+	<label>TV
+	<input name = "YthisUni" type = "radio"
+	value = "TV" /></label>
+
+	<label>Internet
+	<input name = "YthisUni" type = "radio"
+	value = "Internet" /></label>
+
+	<label>Other
+	<input name = "YthisUni" type = "radio"
+	value = "Other" /></label>
+
+	<h2> Comments: </h2>
+
+	<textarea name="Comments" rows="10" cols="30">
+
+	</textarea>
+
+<h2> Choose High school Graduation year </h2>
+		<input list="Months" name="browser"  placeholder="Select Month">
+ 		<datalist id="Months">
+   		<option value="January"> 
+   		<option value="Febraury"> 
+   		<option value="March">
+   		<option value="April">
+   		<option value="May">
+   		<option value="June">
+    	<option value="July">
+     	<option value="August">
+      	<option value="September">
+       	<option value="October">
+   		<option value="November">
+    	<option value="December">
+
+ </datalist></option>
+ <br>
+<input type="number" style="width: 20%" maxlength="4" min="2016" max="2019" autocomplete="on" placeholder="Year Ex: 2019">
+</br>
+<h3> Data: </h3>
+	<input id="comma" name="a" type="text"style="width: 100%"  placeholder="1,3,5,7..."  onchange="calculation()">
+<br>
+<h3> Average: </h3>
+	<output id="average"></output>
+</br>
+<br>
+<h3> Maximum: </h3>
+	<output id="maximum"></output>
+</br>
+</table>
+<p>
+	<input type = "submit" value = "Submit" onclick="validate();" /> 
+	<input type = "reset" value = "Clear" onclick="clearForm();"/>
+</p>
+</form>
+
+<a href="hw3.html"> Computer Science Info </a>
+
+<div id="image">
+
+<a href="https://www2.gmu.edu"><img class="resize" src="gmu.png" alt="gmu logo" >
+</div>
+
+<br> Website by : Pratheek Jayanth (G01099885) </br>
+
+</body>
+</html>
